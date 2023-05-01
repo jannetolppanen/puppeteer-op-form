@@ -3,8 +3,9 @@ require('dotenv').config();
 
 const form_description = "test description"
 const form_date = '01.06.2023'
-const form_startTime = '08'
-const form_endTime = '16';
+const form_startTime = '08:15'
+const form_endTime = '16:45';
+
 
 (async () => {
     // Launch a new browser instance
