@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+const csv = require('csv-parser');
 require('dotenv').config();
 
 const form_description = "test description"
@@ -33,17 +34,15 @@ const form_endTime = '16:45';
         console.log('Typing login information...')
         await page.type('#entrepreneur_email', process.env.USERNM);
         await page.type('#entrepreneur_password', process.env.PASSWD);
+
+        await Promise.all([
+            page.click('#sign_in_form > button'),
+            page.waitForNavigation()])
+            console.log('Signed in')
     } else {
         console.log('We didnt get to the login page')
     }
-
-    // Submit the login form
-    await Promise.all([
-        page.click('#sign_in_form > button'),
-        page.waitForNavigation()
-
-    ]);
-    console.log('Signed in')
+    
 
 
     console.log('Inputting data...')
