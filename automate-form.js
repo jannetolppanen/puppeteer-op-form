@@ -32,7 +32,7 @@ require('dotenv').config();
     console.log('Launching browser...')
     const browser = await puppeteer.launch({
         headless: false,
-        slowMo: 15
+        slowMo: 35
     });
 
     // Create a new page
@@ -92,6 +92,6 @@ require('dotenv').config();
     console.log('All the data submitted')
 
     // Close the browser
-    // await browser.close();
+    await browser.close();
     rl.close()
 })();
