@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-const csv = require('csv-parser');
+const { readCsvFile } = require('./readCsvFile.js')
 require('dotenv').config();
 
 const form_description = "test description"
@@ -9,6 +9,10 @@ const form_endTime = '16:45';
 
 
 (async () => {
+
+    const data = await readCsvFile('./data.csv')
+    console.log(data)
+
     // Launch a new browser instance
     console.log('Launching browser...')
     const browser = await puppeteer.launch({
@@ -19,7 +23,7 @@ const form_endTime = '16:45';
     // Create a new page
     const page = await browser.newPage();
 
-    // Change resolution so screenshots are easier to read
+    // Change resolution
     await page.setViewport({ width: 1920, height: 1080 });
 
     // Navigate to the login page
