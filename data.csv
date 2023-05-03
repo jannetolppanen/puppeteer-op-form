@@ -1,4 +1,4 @@
-Pvm,Asiakas,Klo,Klo,Km,Km,Km yht,Reitti
-3.1.2023,asdfads,06:30,17:15,123,32141,52,testikuvaus
-4.1.2023,gh54h,06:00,18:30,32141,32573,432,testkikuvaus2
-11.1.2023,dfayg,07:45,17:00,32786,32790,4,testki33
+Pvm,Asiakas,KloAloitus,KloLopetus,KmAloitus,KmLopetus,KmYht,Reitti
+1.6.2023,asiakas 1,06:30,17:15,123,32141,52,testikuvaus1
+2.6.2023,asiakas 2,06:00,18:30,32141,32573,432,testikuvaus2
+3.6.2023,asiakas 3,07:45,17:00,32786,32790,4,testikuvaus3
